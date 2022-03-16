@@ -278,7 +278,9 @@ h1, h2, h3 {
 	line-height: 20px;
 	margin-bottom: 60px;
 }
-.info-wrapper__more-info {
+.info-wrapper__more-info, 
+.about-us__more-info,
+.contact__more-info {
 	display: inline-block;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-weight: 800;
@@ -296,11 +298,14 @@ h1, h2, h3 {
 	text-transform: uppercase;
 	background-image: linear-gradient(transparent 35%, #f0c52e 35% 65%,transparent 65%);
 }
-.info-wrapper__more-info:hover {
+.info-wrapper__more-info:hover, 
+.about-us__more-info:hover,
+.contact__more-info:hover {
 	background-image: none;
 	background-color:#222;
 	color: #f7e296;
 }
+
 .details {
 	display: flex;
 	font-family: "Gilroy", "Arial", sans-serif;
@@ -308,7 +313,8 @@ h1, h2, h3 {
 	letter-spacing: 2px;
 }
 
-.details__range-of-flight, .details__damage-radius {
+.details__range-of-flight, 
+.details__damage-radius {
 	display: flex;
 	flex-direction: column;
 	margin-right: 64px;
@@ -376,4 +382,124 @@ h1, h2, h3 {
 	font-size: 18px;
 	line-height: 22px;
 	letter-spacing: 1px;
+}
+
+
+
+/* BRANDS */
+.brands {
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+.brands__list {
+	display: flex;
+	align-items: center;
+	margin-left: -40px;
+}
+.brands__list .brands__logo {
+	margin-left: 40px;
+}
+
+
+/* CONTACTS */
+
+
+.contacts__container {
+	display: flex;
+	margin-bottom: 86px;
+}
+
+/* ABOUT-US */
+.about-us {
+	max-width: 475px;
+	width: 100%;
+	margin-right: auto;
+}
+.about-us__heading,
+.contact__heading {
+	font-weight: 800;
+	font-size: 47px;
+	line-height: 58px;
+	margin-bottom: 50px;
+}
+.about-us__heading:before,
+.contact__heading:before {
+	display: block;
+	content: "";
+	width: 80px;
+	height: 7px;
+	background-color: #222;
+	margin-bottom: 50px;
+}
+.about-us__desc,
+.contact__desc {
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 28px;
+	margin-bottom: 40px;
+}
+.about-us__desc:last-child {
+	margin-bottom: 60px;
+}
+.about-us__list {
+	list-style-type: circle;
+	padding: 0;
+	padding-left: 30px;
+	margin-bottom: 84px;
+}
+.about-us__item:not(.about-us__item:last-child) {
+	margin-bottom: 21px;
+}
+.about-us__list__desc {
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 800;
+	line-height: 28px;
+}
+.about-us__more-info,
+.contact__more-info {
+	margin-bottom: 0;
+}
+
+
+/* CONTACT */
+.contact {
+	max-width: 560px;
+	width: 100%;
+}
+.contact__map-wrapper {
+	max-width: 560px;
+	width: 100%;
+	height: 222px;
+	background-color: lightgrey;
+	margin-bottom: 85px;
+}
+
+/*  FOOTER   */
+
+.site-footer {
+	background-color: #363636;
+	padding-top: 64px;
+	padding-bottom: 64px;
+}
+.site-footer__link--logo {
+    display: inline-block;
+	margin-bottom: 40px;
+}
+.site-footer__link--logo__image {
+    display: block;
+}
+.site-footer__address {
+	font-style: normal;
+	color: #fff;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+}
+.site-footer__address:after {
+	display: block;
+	content: "";
+	width: 80px;
+	height: 7px;
+	background-color: #ffc600;
+	margin-top: 80px;
 }
