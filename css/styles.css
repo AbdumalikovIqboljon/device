@@ -326,3 +326,54 @@ h1, h2, h3 {
 	font-size: 13px;
 	line-height: 15px;
 }
+
+/*   CATALOG   */
+
+.product-list {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	margin-left: -40px;
+	list-style-type: none;
+	padding-bottom: 20px;
+	margin-bottom: 69px;
+}
+.product-list__item {
+	display: flex;
+	flex-direction: column;
+	margin-left: 40px;
+}
+.product-list__item:before {
+	content: "";
+	width: 160px;
+	height: 160px;
+	margin-bottom: 38px;
+	background-color: #f7e296;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.product-list__item:first-child:before {
+	background-image: url("../images/vr-glasses.svg");
+}
+.product-list__item:nth-child(2n):before {
+	background-image: url("../images/selfie-and-phone.svg");
+}
+.product-list__item:nth-child(3n):before {
+	background-image: url("../images/photo-camera.svg");
+}
+.product-list__item:nth-child(4n):before {
+	background-image: url("../images/pulse-watch.svg");
+}
+.product-list__item:nth-child(5n):before {
+	background-image: url("../images/handwatch.svg");
+}
+.product-list__item:last-child:before {
+	background-image: url("../images/drone.svg");
+}
+.product-list__desc {
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 1px;
+}
