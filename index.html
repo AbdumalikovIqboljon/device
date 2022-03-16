@@ -14,12 +14,9 @@
     <header class="site-header">
         <div class="site-header__container container">
 
-            <!-- SITE-HEADER--TOP  -->
-            <div class="site-header--top">
-                <a class="site-header__link link--logo" href="/">
-                    <img class="link--logo__image" src="./images/device-site-logo.svg" alt="Device site logo" width="163" height="35">
-                </a>
-            </div>
+            <a class="site-header__link link--logo" href="/">
+                <img class="link--logo__image" src="./images/device-site-logo.svg" alt="Device site logo" width="163" height="35">
+            </a>
 
 
             <!-- SITENAV -->
@@ -37,25 +34,25 @@
                 </div>
                 <ul class="sitenav__list nav-list">
                     <li class="nav-list__item">
-                        <a class="nav-list__link" href="#">Каталог товаров</a>
-                        <ul class="dropdown">
+                        <a class="nav-list__link first" href="#">Каталог товаров</a>
+                        <ul class="dropdown d-none">
                             <li class="dropdown__item">
                                 <a class="dropdown__link" href="#">Виртуальная реальность</a>
-                            </li>
-                            <li class="dropdown__item">
-                                <a class="dropdown__link" href="#">Моноподы для селфи</a>
-                            </li>
-                            <li class="dropdown__item">
-                                <a class="dropdown__link" href="#">Экшн-камеры</a>
                             </li>
                             <li class="dropdown__item">
                                 <a class="dropdown__link" href="#">Фитнес-браслеты</a>
                             </li>
                             <li class="dropdown__item">
+                                <a class="dropdown__link" href="#">Квадрокоптер</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a class="dropdown__link" href="#">Моноподы для селфи</a>
+                            </li>
+                            <li class="dropdown__item">
                                 <a class="dropdown__link" href="#">Умные часы</a>
                             </li>
                             <li class="dropdown__item">
-                                <a class="dropdown__link" href="#">Квадрокоптер</a>
+                                <a class="dropdown__link" href="#">Экшн-камеры</a>
                             </li>
 
                         </ul>
@@ -73,6 +70,40 @@
             </nav>
         </div>
     </header>
+
+
+    <!--  MAIN  -->
+    <main>
+
+        <!--  SITE-HERO  -->
+        <section class="site-hero">
+            <div class="site-hero__container container">
+
+                <div class="site-hero__info info-wrapper">
+                    <h2 class="info-wrapper__heading">Порхает как бабочка, жалит как пчела!</h2>
+                    <p class="info-wrapper__desc">
+                        Этот обычный, на первый взгляд, квадрокоптер оснащен 
+                        мощным лазером, замаскированным под стандартную камеру.
+                    </p>
+
+                    <a class="info-wrapper__more-info" href="#">Подробнее</a>
+
+                    <div class="info-wrapper__details details">
+                        <span class="details__range-of-flight">
+                            <span class="details__heading">800 m</span>
+                            <span class="details__desc">Дальность полета</span>
+                        </span>
+                        <span class="details__damage-radius">
+                            <span class="details__heading">50 m</span>
+                            <span class="details__desc">Дальность полета</span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
 
 
 
