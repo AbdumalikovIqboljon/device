@@ -24,7 +24,7 @@
                 <div class="sitenav--top">
                     <form class="sitenav__form form--search">
                         <label class="form--search__label" for="input-search">
-                            <input class="form--search__input" id="input-search" type="text" name="information" placeholder="Поиск по сайту" aria-labelledby="Search input">
+                            <input class="form--search__input" id="input-search" type="text" name="information" placeholder="Поиск по сайту" aria-label="Search input">
                         </label>
                         
                     </form>
@@ -78,8 +78,20 @@
         <!--  SITE-HERO  -->
         <section class="site-hero">
             <div class="site-hero__container container">
+                
+                <ul class="site-hero__list list-features">
+                    <li class="list-features__item list-features__item--active">
+                        <a class="list-features__link"  href="#first">1</a>
+                    </li>
+                    <li class="list-features__item">
+                        <a class="list-features__link"  href="#second">2</a>
+                    </li>
+                    <li class="list-features__item">
+                        <a class="list-features__link"  href="#third">3</a>
+                    </li>
+                </ul>
 
-                <div class="site-hero__info info-wrapper">
+                <section class="site-hero__info site-hero__info--active info-wrapper" id="first">
                     <h2 class="info-wrapper__heading">Порхает как бабочка, жалит как пчела!</h2>
                     <p class="info-wrapper__desc">
                         Этот обычный, на первый взгляд, квадрокоптер оснащен 
@@ -89,16 +101,61 @@
                     <a class="info-wrapper__more-info" href="#">Подробнее</a>
 
                     <div class="info-wrapper__details details">
-                        <span class="details__range-of-flight">
-                            <span class="details__heading">800 m</span>
+                        <span class="details__range-of-flight details--info">
+                            <span class="details__heading">800 м</span>
                             <span class="details__desc">Дальность полета</span>
                         </span>
-                        <span class="details__damage-radius">
-                            <span class="details__heading">50 m</span>
+                        <span class="details__damage-radius details--info">
+                            <span class="details__heading">50 м</span>
                             <span class="details__desc">Дальность полета</span>
                         </span>
                     </div>
-                </div>
+                </section>
+
+                <section class="site-hero__info info-wrapper" id="second">
+                    <h2 class="info-wrapper__heading">Делай селфи,<br> как Бен Стиллер! </h2>
+                    <p class="info-wrapper__desc">
+                        Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                    </p>
+
+                    <a class="info-wrapper__more-info" href="#">Подробнее</a>
+
+                    <div class="info-wrapper__details details">
+                        <span class="details__range-of-flight details--info">
+                            <span class="details__heading">8,5 м</span>
+                            <span class="details__desc">Длина палки</span>
+                        </span>
+                        <span class="details__damage-radius details--info">
+                            <span class="details__heading">5 кг</span>
+                            <span class="details__desc">Вес палки</span>
+                        </span>
+                        <span class="details__damage-radius details--info">
+                            <span class="details__heading">Карбон</span>
+                            <span class="details__desc">Материал</span>
+                        </span>
+                    </div>
+                </section>
+
+                <section class="site-hero__info info-wrapper" id="third">
+                    <h2 class="info-wrapper__heading">Виртуальная реальность</h2>
+                    <p class="info-wrapper__desc">
+                        Этот обычный, на первый взгляд, квадрокоптер оснащен 
+                        мощным лазером, замаскированным под стандартную камеру.
+                    </p>
+
+                    <a class="info-wrapper__more-info" href="#">Подробнее</a>
+
+                    <div class="info-wrapper__details details">
+                        <span class="details__range-of-flight details--info">
+                            <span class="details__heading">800 м</span>
+                            <span class="details__desc">Дальность полета</span>
+                        </span>
+                        <span class="details__damage-radius details--info">
+                            <span class="details__heading">50 м</span>
+                            <span class="details__desc">Дальность полета</span>
+                        </span>
+                    </div>
+                </section>
 
             </div>
         </section>
@@ -133,7 +190,43 @@
         <!-- TABS -->
 
         <div class="tabs">
-            <div class="container">
+            <div class="tabs__container container">
+                <ul class="tabs__list tabs-features">
+                    <li class="tabs-features__item tabs-features__item--active">
+                        <a class="tabs-features__link" href="#delivery">Доставка</a>
+                    </li>
+                    <li class="tabs-features__item">
+                        <a class="tabs-features__link" href="#guarantee">Гарантия</a>
+                    </li>
+                    <li class="tabs-features__item">
+                        <a class="tabs-features__link" href="#credit">Кредит</a>
+                    </li>
+                </ul>
+                <span class="tab-features--line"></span>
+                <div class="tabs__panels">
+
+                    <section class="tabs__panel tabs__panel--active panel" id="delivery">
+                        <h2 class="panel__heading">Доставка</h2>
+                        <p class="panel__desc">
+                            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+                        </p>
+                    </section>
+
+                    <section class="tabs__panel panel" id="guarantee">
+                        <h2 class="panel__heading">Гарантия</h2>
+                        <p class="panel__desc">
+                            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+                        </p>
+                    </section>
+
+                    <section class="tabs__panel panel" id="credit">
+                        <h2 class="panel__heading">Кредит</h2>
+                        <p class="panel__desc">
+                            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+                        </p>
+                    </section>
+
+                </div>
 
             </div>
         </div>
@@ -142,6 +235,7 @@
         <!-- BRANDS SECTION -->
 
         <section class="brands">
+            <h2 class="visually-hidden">Brands</h2>
             <div class="container">
                 <div class="brands__list">
                     <img class="brands__logo" src="./images/dji-brand-logo.svg" alt="DJI brand logo" width="260" height="100">

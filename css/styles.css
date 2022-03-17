@@ -1,4 +1,3 @@
-/*FONT-FAMILY*/
 @font-face {
     font-family: "Gilroy";
     src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"),
@@ -255,6 +254,10 @@ h1, h2, h3 {
 }
 
 /* SITE-HERO */
+.site-hero {
+	position: relative;
+	margin-bottom: 96px;
+}
 .site-hero__container {
 	display: flex;
 	flex-direction: row-reverse;
@@ -270,13 +273,40 @@ h1, h2, h3 {
 	transform: translateY(-13px);
 	background-position: calc(50%) calc(50%);
 }
-.info-wrapper {
+/* START */
+.site-hero__info {
+	display: none;
 	max-width: 495px;
 	width: 100%;
-	margin-left: auto;
-	margin-right: 95px;
-
+	margin-left: 44px;
+	margin-right: auto;
 }
+.site-hero__info--active {
+	display: block;
+}
+.list-features {
+	position: absolute; /* site-hero is the relative */
+	right: 50px;
+	bottom: 135px;
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-left: -10px;
+}
+.list-features__item {
+	margin-left: 10px;
+}
+.list-features__item--active .list-features__link {
+	background-color: #f0c52e;
+	color: #fff;
+}
+.list-features__link {
+	padding: 0px 6px;
+	text-decoration: none;
+	color: #000;
+}
+/* END */
 .info-wrapper__heading {
 	font-weight: 800;
 	font-size: 47px;
@@ -336,16 +366,20 @@ h1, h2, h3 {
 	font-size: 36px;
 	line-height: 42px;
 	margin-bottom: 15px;
-	text-transform: uppercase;
 }
 .details__desc {
 	font-weight: 300;
 	font-size: 13px;
 	line-height: 15px;
 }
+.details--info:last-child {
+	margin-right: 0;
+}
 
 /*   CATALOG   */
-
+.catalog {
+	margin-bottom: 164px;
+}
 .product-list {
 	display: flex;
 	padding: 0;
@@ -395,6 +429,92 @@ h1, h2, h3 {
 	letter-spacing: 1px;
 }
 
+
+/* TABS */
+.tabs {
+	background-color: #e5e5e5;
+}
+.tabs__container {
+	display: flex;
+}
+.tabs-features {
+	width: 277px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	transform: translateY(-20px);
+}
+.tab-features--line {
+	display: block;
+	content: "";
+	width: 7px;
+	height: 320px;
+	background-color: #222;
+	margin-right: 116px;
+	transform: translateY(-80px);
+}
+.tabs-features__item--active .tabs-features__link {
+	background-image: none;
+	width: 277px;
+	background-color:#222;
+	color: #f7e296;
+	padding-right: 117px;
+}
+.tabs-features__link {
+	width: 160px;
+	display: inline-block;
+	text-align: center;
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 4px;
+	text-decoration: none;
+	color: #222;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	margin-bottom: 40px;
+	transition: all 0.1s linear;
+	text-transform: uppercase;
+	background-image: linear-gradient(transparent 40%, #f0c52e 40% 60%,transparent 60%);
+}
+.tabs__panel {
+	width: 495px;
+	display: none;
+}
+.tabs__panel--active {
+	display: block;
+}
+ .tabs__panels {
+	display: flex;
+}
+.tabs__panels:after {
+	content:"";
+	width: 136px;
+	height: 164px;
+	background-size: 136px 164px;
+	background-image: url("../images/delivery-boy-icon.svg");
+	background-repeat: no-repeat;
+	margin-left: 120px;
+	transform: translateY(-30px);
+}
+
+.panel {
+	transform: translateY(-30px);
+}
+.panel__heading {
+	font-weight: 800;
+	font-size: 47px;
+	line-height: 58px;
+	letter-spacing: 4px;
+	margin-bottom: 40px;
+}
+.panel__desc {
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 30px;
+	margin-bottom: 40px;
+}
 
 
 /* BRANDS */
