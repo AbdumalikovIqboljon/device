@@ -1,3 +1,5 @@
+
+// Catalog dropdown in site-header
 let dropdownParent = document.querySelector('.first');
 let dropdown = document.querySelector('.dropdown');
 
@@ -5,6 +7,7 @@ dropdownParent.addEventListener('click', function() {
     dropdown.classList.toggle('d-none'); 
 });
 
+// Site-hero > info tab
 let elFeaturesList = document.querySelector('.list-features');
 let elsFeaturesListItem = document.querySelectorAll('.list-features__item');
 let elsFeaturesListLink = document.querySelectorAll('.list-features__link');
@@ -31,6 +34,7 @@ if(elsFeaturesListLink.length > 0) {
 }
 
 
+// Delivery, Guarantee, Credit Section
 let elTabsList = document.querySelector('.tabs-features');
 let elsTabsListItem = document.querySelectorAll('.tabs-features__item');
 let elsTabsListLink = document.querySelectorAll('.tabs-features__link');
@@ -54,3 +58,32 @@ if(elsTabsListLink.length > 0) {
 
     })
 }
+
+// Form modal
+
+const elShowModal =document.querySelectorAll(".show-modal");
+const elFormModal =document.querySelector(".form-control");
+const elCloseModalButton = document.querySelector(".close-modal");
+const elBackgroundShadow = document.querySelector(".overlay");
+
+function openModal(){
+    elFormModal.classList.remove("hidden");
+    elBackgroundShadow.classList.remove("hidden");
+}
+function closeModal(){
+    elFormModal.classList.add("hidden");
+    elBackgroundShadow.classList.add("hidden");
+}
+
+elShowModal.forEach(elShowModal => { 
+    elShowModal.addEventListener("click",openModal);
+});
+
+elCloseModalButton.addEventListener("click", closeModal);
+elBackgroundShadow.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function(evt){
+    if(evt.key==='Escape' && !elFormModal.classList.contains('hidden')){
+        closeModal();
+    }
+});

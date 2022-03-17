@@ -33,6 +33,7 @@
 }
 
 body {
+	position: relative;
 	font-family: "Open Sans", "Arial", sans-serif;
 	color: #222;
 }
@@ -52,7 +53,9 @@ h1, h2, h3 {
 	box-sizing: inherit;
 	margin: 0;
 }
-
+*:focus {
+	outline: 1px solid lightslategray;
+}
 /* VISUALLY HIDING CODE */
 .visually-hidden {
 	position: absolute;
@@ -177,9 +180,7 @@ h1, h2, h3 {
 	padding: 0;
 	margin: 0;
 }
-.nav-list__item:first-child {
-	margin-right: auto;
-}
+
 .nav-list__item:nth-last-child(1) {
 	margin-left: 111px;
 }
@@ -302,7 +303,7 @@ h1, h2, h3 {
 	color: #fff;
 }
 .list-features__link {
-	padding: 0px 6px;
+	padding: 0 5px;
 	text-decoration: none;
 	color: #000;
 }
@@ -330,7 +331,7 @@ h1, h2, h3 {
 	letter-spacing: 4px;
 	text-decoration: none;
 	color: #222;
-	padding-top: 2px;
+	padding-top: 3px;
 	padding-bottom: 2px;
 	padding-right: 42px;
 	padding-left: 44px;
@@ -428,7 +429,6 @@ h1, h2, h3 {
 	line-height: 22px;
 	letter-spacing: 1px;
 }
-
 
 /* TABS */
 .tabs {
@@ -605,6 +605,129 @@ h1, h2, h3 {
 	margin-bottom: 85px;
 }
 
+
+/*  FORM MODAL STYLES */
+.hidden {
+	display: none;
+}
+  
+/*  BACKGROUND-SHADOW STYLES, WHEN FORM MODAL OPENS */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(3px);
+	z-index: 5;
+}
+  
+.form-control {
+	position: fixed;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	z-index: 10;
+	margin-top: 100px;
+	width: 960px;
+	padding: 92px 100px 69px 100px;
+	background-color: #fff;
+	box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+}
+.form-control__close-modal {
+	position: absolute;
+	top: 20px;
+	font-size: 36px;
+	line-height: 0.6;
+	cursor: pointer;
+	border: none;
+	color: #fff;
+	background-color: #f7e296;
+	right: 20px;
+	padding: 11px 10px 10px 11px;
+	border-radius: 50%;
+}
+  
+.form-control--data {
+	display: flex;
+	margin-bottom: 32px;
+}
+.form-control__wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	max-width: 360px;
+}
+.form-control__wrapper:first-child {
+	margin-right: auto;
+}
+.form-control__label {
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	margin-bottom: 10px;
+}
+.form-control__input {
+	background-color: #f2f2f2;
+	border: none;
+	padding: 15px 20px;
+	color: #222;
+}
+.form-control__wrapper--textarea {
+	max-width: 760px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.form-control__textarea {
+	background-color: #f2f2f2;
+	color: #222;
+	border: none;
+	resize: none;
+	padding: 15px 20px;
+	margin-bottom: 54px;
+}
+.form-control__input::placeholder,
+.form-control__textarea::placeholder {
+	font-family: "Open Sans", "Arial", sans-serif;
+}
+.form-control__input:focus,
+.form-control__textarea:focus {
+	outline: 1px solid lightslategrey;
+}
+.form-control__button {
+	display: inline-block;
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 4px;
+	text-decoration: none;
+	color: #222;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	padding-right: 42px;
+	padding-left: 44px;
+	margin: 0;
+	transition: all 0.1s linear;
+	text-transform: uppercase;
+	background-color: transparent;
+	border: none;
+	background-image: linear-gradient(transparent 43%, #f7e296 43% 63%, transparent 63%);
+}
+.form-control__button:hover {
+	background-image: none;
+	background-color:#222;
+	color: #f7e296;
+}
+
+
+
+
 /*  FOOTER   */
 
 .site-footer {
@@ -681,9 +804,19 @@ h1, h2, h3 {
 .socials__link__icon {
 	display: block;
 }
+.socials__link svg path {
+	transition: fill-opacity 0.2s linear;
+}
+.socials__link:hover svg path {
+	fill-opacity: 1;
+}
 
 /*  SITE-FOOTER--RIGHT   */
 .site-footer--right {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
 	margin-left: auto;
 	text-align: right;
 }
@@ -725,7 +858,7 @@ h1, h2, h3 {
 	background-image: url("../images/add-to-cart-icon-yellow.svg");
 }
 .site-footer__contact-number {
-	display: block;
+	display: inline-block;
 	margin-bottom: 65px;
 	text-decoration: none;
 	color: #fff;

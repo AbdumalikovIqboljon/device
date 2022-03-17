@@ -281,10 +281,42 @@
                     <div class="contact__map-wrapper">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4498.158308708761!2d37.52682850102893!3d55.6876115826485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2sUlitsa%20Stroiteley%2C%2015%2C%20Moskva%2C%20Russia%2C%20119311!5e0!3m2!1sen!2s!4v1647434419927!5m2!1sen!2s" width="560" height="222" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <a class="contact__more-info" href="#">Напишите нам</a>
+                    <a class="contact__more-info show-modal" href="#">Напишите нам</a>
                 </section>
             </div>
         </div>
+
+        
+
+        <!-- FORM MODAL HIDDEN -->
+
+
+        <form class="contacts__form form-control modal hidden" action="https://echo.htmlacademy.ru" method="POST">
+            <button class="form-control__close-modal close-modal">&times;</button>
+            <div class="form-control--data">
+                <div class="form-control__wrapper">
+                    <label class="form-control__label" for="fullname">Ваше имя:</label>
+                    <input class="form-control__input" name="fullname" id="fullname" type="text" placeholder="Имя Фамилия" required>
+                </div>
+        
+                <div class="form-control__wrapper">
+                    <label class="form-control__label" for="email">Ваш e-mail:</label>
+                    <input class="form-control__input" name="email" id="email" type="email" placeholder="email@example.com" required>
+                </div>
+            </div>
+      
+            <div class="form-control__wrapper--textarea">
+                <label class="form-control__label" for="textarea">Текст письма:</label>
+                <textarea class="form-control__textarea" id="textarea" name="Your message" cols="30" rows="10" placeholder="В свободной форме" required></textarea>
+            </div>
+      
+            <button class="form-control__button" type="submit">Отправить</button>
+        </form>
+        
+        <div class="overlay hidden"></div>
+
+
+        
     </main>
 
 
